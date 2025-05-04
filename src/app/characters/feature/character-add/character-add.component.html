@@ -1,0 +1,40 @@
+<p>character-add works!</p>
+
+<form [formGroup]="formulario" (ngSubmit)="submit()">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">id</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+      formControlName="id"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+      formControlName="name"
+    />
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">descripción</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="name@example.com"
+      formControlName="description"
+    />
+  </div>
+
+  <button [disabled]="loading()" type="submit">
+    {{ loading() ? "Guardando..." : "Guardar" }}
+  </button>
+</form>

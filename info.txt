@@ -1,0 +1,23 @@
+
+VIDEO INFO
+https://www.youtube.com/watch?v=iOOsPj2x0xc
+
+
+FIREBASE CONECCTION
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAjDJpNk7Shuf69RxEZuZPcd4whGp7wQQg",
+  authDomain: "kinst-49897.firebaseapp.com",
+  projectId: "kinst-49897",
+  storageBucket: "kinst-49897.firebasestorage.app",
+  messagingSenderId: "675872117533",
+  appId: "1:675872117533:web:1204220eab566d46b347f4"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);

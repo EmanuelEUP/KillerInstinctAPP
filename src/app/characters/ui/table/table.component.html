@@ -1,0 +1,31 @@
+<p>
+  Table is just a mapping of objects to table rows with <code>&#64;for</code>
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (character of _Character(); track character.id) {
+
+    <tr>
+      <td>{{ character.id }}</td>
+      <td>{{ character.name }}</td>
+      <td>{{ character.description }}</td>
+      <td><a [routerLink]="['/edit/' + character.id]">editar</a></td>
+      <td><a>eliminar</a></td>
+    </tr>
+    }@empty {
+
+    <tr>
+      <td colspan="3">No hay datos!</td>
+    </tr>
+
+    }
+  </tbody>
+</table>
