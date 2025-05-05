@@ -4,7 +4,7 @@ import SignUpComponent from './sign-up/sign-up.component';
 export default [
   {
     path: '',
-    redirectTo: 'sign-up',
+    redirectTo: 'sign-in',
     pathMatch: 'full',
   },
   {

@@ -1,4 +1,101 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+body{
+  background-image: url("./assets/img/bg04.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    animation: Animsection04 5s infinite linear alternate;
+}
+
+
+/*   FONTS FACES    */
+
+@font-face {
+  font-family: "robotobold";
+  src: url("./assets/font/roboto_bold_macroman/Roboto-Bold-webfont.eot");
+  src: url("./assets/font/roboto_bold_macroman/Roboto-Bold-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotolight";
+  src: url("./assets/font/roboto_light_macroman/Roboto-Light-webfont.eot");
+  src: url("./assets/font/roboto_light_macroman/Roboto-Light-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "robotothin";
+  src: url("./assets/font/roboto_thin_macroman/Roboto-Thin-webfont.eot");
+  src: url("./assets/font/roboto_thin_macroman/Roboto-Thin-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Silkscreen";
+  src: url("./assets/font/Silkscreen-fontfacekit/silkscreen_bold_macroman/slkscrb-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font01 {
+  font-family: "robotolight" !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font02 {
+  font-family: "robotothin" !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font03 {
+  font-family: "robotobold" !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font04 {
+  font-family: "Silkscreen" !important;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FONDOS */
+
+.bgsection04 {
+  background-image: url("./assets/img/bg04.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  animation: Animsection04 5s infinite linear alternate;
+}
+
+.bgsection05 {
+  background-image: url("./assets/img/bg05.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  animation: Animsection04 5s infinite linear alternate;
+}
+
+@keyframes Animsection04 {
+  from {
+    background-position: bottom left;
+  }
+
+  to {
+    background-position: top right;
+  }
+}

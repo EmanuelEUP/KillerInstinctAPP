@@ -1,92 +1,103 @@
-<div id="loginbg" class="img js-fullheight">
-  <section class="ftco-section">
+<div class="containervid">
+  <video autoplay loop muted plays-inline class="background-clip">
+    <source src="./../../../../assets/videos/bg07.mp4" type="video/mp4" />
+  </video>
+
+  <img
+    class="logo d-none d-sm-none d-md-block"
+    title="icon"
+    src="./../../../../assets/img/Rare.webp"
+    width="45"
+    height="50"
+  />
+
+  <section>
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6 text-center mb-5">
-          <h2 class="heading-section">Login #10</h2>
+          <img
+            src="./../../../../assets/img/kilogo02.png"
+            class="img-fluid"
+            title="Killer Instinct "
+            width="80%"
+          />
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-4">
-          <div class="login-wrap p-0">
-            <h3 class="mb-4 text-center">Have an account?</h3>
 
-            <form
-              class="signin-form"
-              [formGroup]="_FormularioGroup"
-              (ngSubmit)="submitform()"
-            >
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="email"
-                  required
-                  formControlName="email"
-                />
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+          <form
+            class="row"
+            [formGroup]="_FormularioGroup"
+            (ngSubmit)="submitform()"
+          >
+            <div class="col-12 col-lg-4">
+              <!--<label for="idfrm_email" class="form-label">Email :</label>-->
 
-                @if(isRequired('email')){
-                <small class="align-content-center text-danger">
-                  Este campo es requerido</small
-                >
-                } @if(hasEmailError()){
-                <small class="align-content-center text-danger">
-                  El campo debe tener formato de correo valido</small
-                >
-                }
-              </div>
-              <div class="form-group">
-                <input
-                  id="password-field"
-                  type="password"
-                  class="form-control"
-                  placeholder="Password"
-                  required
-                  formControlName="password"
-                />
+              <input
+                id="idfrm_email"
+                type="text"
+                class="form-control transparent-input form-control-sm mb-2 mt-1"
+                placeholder="email"
+                required
+                formControlName="email"
+              />
 
-                @if(isRequired('password')){
-                <small class="align-content-center text-danger">
-                  Este campo es requerido</small
-                >
-                }
-
-                <span
-                  toggle="#password-field"
-                  class="fa fa-fw fa-eye field-icon toggle-password"
-                ></span>
-              </div>
-              <div class="form-group">
-                <button
-                  type="submit"
-                  class="form-control btn btn-primary submit px-3"
-                >
-                  Sign In
-                </button>
-              </div>
-              <div class="form-group d-md-flex">
-                <div class="w-50">
-                  <label class="checkbox-wrap checkbox-primary"
-                    >Remember Me
-                    <input type="checkbox" checked />
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-                <div class="w-50 text-md-right">
-                  <a href="#" style="color: #fff">Forgot Password</a>
-                </div>
-              </div>
-            </form>
-
-            <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
-            <div class="social d-flex text-center">
-              <app-google-button
-                (onclick)="signingwithgoogle()"
-              ></app-google-button>
-              <a href="#" class="px-2 py-2 ml-md-1 rounded"
-                ><span class="ion-logo-twitter mr-2"></span> Twitter</a
+              @if(isRequired('email')){
+              <small class="align-content-center text-danger">
+                Este campo es requerido</small
               >
+              } @if(hasEmailError()){
+              <small class="align-content-center text-danger">
+                El campo debe tener formato de correo valido</small
+              >
+              }
             </div>
+            <div class="col-12 col-lg-4">
+              <!--<label for="idfrm_password" class="form-label">Password : </label> -->
+              <input
+                id="password-field"
+                type="password"
+                class="form-control form-control-sm mb-2 mt-1"
+                placeholder="Password"
+                required
+                formControlName="password"
+              />
+
+              @if(isRequired('password')){
+              <small class="align-content-center text-danger">
+                Este campo es requerido</small
+              >
+              }
+            </div>
+            <div class="col-12 col-lg-4 d-flex justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-outline-danger mt-xs-3 mb-sm-3 font04"
+              >
+                <img
+                  title="icon"
+                  src="./../../../../assets/img/love-svgrepo-com.svg"
+                  width="15"
+                  height="15"
+                />
+
+                login
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-12">
+          <p class="w-100 text-center text-light font04">
+            &mdash; Don't you have an account? &mdash;
+          </p>
+          <div class="social d-flex text-center justify-content-center">
+            <app-google-button
+              (onclick)="signingwithgoogle()"
+            ></app-google-button>
           </div>
         </div>
       </div>

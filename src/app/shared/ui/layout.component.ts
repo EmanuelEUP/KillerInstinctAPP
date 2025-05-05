@@ -7,6 +7,7 @@ import { AuthStateService } from '../data-access/auth-state.services';
   templateUrl: './layout.component.html',
   imports: [RouterOutlet],
   standalone: true,
+  styleUrl: './layout.component.scss',
 })
 export class LayoutComponent {
   authstate = inject(AuthStateService);
